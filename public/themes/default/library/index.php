@@ -12,3 +12,4 @@ require __DIR__.'/menus.php';
 require __DIR__.'/assets.php';
 require __DIR__.'/wordpress.php';
 require __DIR__.'/helpers.php';
+require __DIR__.'/blade.php';

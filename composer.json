@@ -1,42 +1,94 @@
 {
-    "name": "wordplate/wordplate",
-    "description": "Wordplate is a modern WordPress stack. Don't repeat yourself.",
-    "keywords": ["wordplate", "wordpress", "boilerplate", "plate"],
-    "license": "MIT",
-    "require": {
-        "php": "^5.5.9 || ^7.0",
-        "wordplate/framework": "^4.0",
-        "roots/soil": "^3.0",
-        "koodimonni-language/nl_nl": "^4.4"
+  "name": "wordplate/wordplate",
+  "description": "Wordplate is a modern WordPress stack. Don't repeat yourself.",
+  "keywords": [
+    "wordplate",
+    "wordpress",
+    "boilerplate",
+    "plate"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": "^5.5.9 || ^7.0",
+    "wordplate/framework": "^4.0",
+    "roots/soil": "^3.0",
+    "koodimonni-language/nl_nl": "^4.4",
+    "mickaelmattsson/blade": "dev-master",
+    "jjgrainger/wp-custom-post-type-class": "dev-master",
+    "wpackagist-plugin/advanced-custom-fields": "dev-trunk",
+    "twittem/wp-bootstrap-navwalker": "dev-master",
+    "tareq1988/wp-eloquent": "dev-master",
+    "symfony/var-dumper": "^3.1@dev"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://wpackagist.org"
+    {
+      "type": "composer",
+      "url": "http://languages.koodimonni.fi"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "twittem/wp-bootstrap-navwalker",
+        "version": "master",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/twittem/wp-bootstrap-navwalker/archive/master.zip",
+          "reference": "master"
         },
-        {
-            "type": "composer",
-            "url": "http://languages.koodimonni.fi"
+        "autoload": {
+          "classmap": [
+            "wp_bootstrap_navwalker.php"
+          ]
         }
-    ],
-    "scripts": {
-        "post-root-package-install": [
-            "php -r \"copy('.env.example', '.env');\""
-        ]
+      }
     },
-    "extra": {
-        "installer-paths": {
-            "public/mu-plugins/{$name}": ["type:wordpress-muplugin"],
-            "public/plugins/{$name}": ["type:wordpress-plugin"],
-            "public/themes/{$name}": ["type:wordpress-theme"]
-        },
-        "dropin-paths": {
-            "public/languages/": ["vendor:koodimonni-language"],
-            "public/languages/plugins/": ["vendor:koodimonni-plugin-language"],
-            "public/languages/themes/": ["vendor:koodimonni-theme-language"]
-        },
-        "wordpress-install-dir": "public/wordpress"
+    {
+      "type": "package",
+      "package": {
+        "name": "mickaelmattsson/blade",
+        "version": "master",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/mikaelmattsson/blade/archive/master.zip",
+          "reference": "master"
+        }
+      }
+    }
+  ],
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"copy('.env.example', '.env');\""
+    ]
+  },
+  "extra": {
+    "installer-paths": {
+      "public/mu-plugins/{$name}": [
+        "type:wordpress-muplugin"
+      ],
+      "public/plugins/{$name}": [
+        "type:wordpress-plugin"
+      ],
+      "public/themes/{$name}": [
+        "type:wordpress-theme"
+      ]
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "dropin-paths": {
+      "public/languages/": [
+        "vendor:koodimonni-language"
+      ],
+      "public/languages/plugins/": [
+        "vendor:koodimonni-plugin-language"
+      ],
+      "public/languages/themes/": [
+        "vendor:koodimonni-theme-language"
+      ]
+    },
+    "wordpress-install-dir": "public/wordpress"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
