@@ -4,11 +4,10 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width">
-  <meta name="theme-color" content="#464646">
 
   <?php wp_head(); ?>
 
-  <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+  <link rel="stylesheet" href="<?php asset('css/style.css') ?>">
 </head>
 <body <?php body_class(); ?>>
 

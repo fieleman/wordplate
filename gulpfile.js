@@ -17,10 +17,10 @@ var paths = {
  */
 
 elixir.config.publicPath = 'public/themes/default/dist';
-elixir.config.css.outputFolder = 'styles';
 elixir.config.css.sass.folder = 'styles';
+elixir.config.css.outputFolder = 'css';
 elixir.config.js.folder = 'scripts';
-elixir.config.js.outputFolder = 'scripts';
+elixir.config.js.outputFolder = 'js';
 
 elixir(function (mix) {
   mix.sass('app.scss');

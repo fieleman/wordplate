@@ -8,5 +8,5 @@ body {
   & > .wrap { margin-top: 50px; }
 
   // Extra room when admin-bar is visible
-  .admin-bar .navbar-fixed-top { top: 32px; }
+  &.admin-bar .navbar-fixed-top { top: 32px; }
 }
