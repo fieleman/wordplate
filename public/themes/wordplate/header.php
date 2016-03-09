@@ -6,14 +6,11 @@
   <meta name="viewport" content="width=device-width">
   <meta name="theme-color" content="#464646">
 
-  <meta name="author" content="">
-  <meta name="description" content="">
-
   <?php wp_head(); ?>
 
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 </head>
-<body>
+<body <?php body_class(); ?>>
 
     <header id="masthead" class="site-header" role="banner">
         <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">

@@ -1,27 +1,25 @@
 {
     "name": "wordplate/wordplate",
-    "description": "A WordPress boilerplate",
-    "keywords": ["wordplate", "wordpress", "boilerplate"],
+    "description": "Wordplate is a modern WordPress stack. Don't repeat yourself.",
+    "keywords": ["wordplate", "wordpress", "boilerplate", "plate"],
     "license": "MIT",
     "require": {
-        "wordplate/framework": "3.0.*",
-        "roots/soil": "^3.5.0"
+        "php": "^5.5.9 || ^7.0",
+        "wordplate/framework": "^4.0",
+        "roots/soil": "^3.0"
     },
     "repositories": [
         {
             "type": "composer",
-            "url": "http://wpackagist.org"
+            "url": "https://wpackagist.org"
         }
     ],
     "scripts": {
         "post-root-package-install": [
             "php -r \"copy('.env.example', '.env');\""
-        ],
-        "post-create-project-cmd": [
-            "php plate salts:generate"
         ]
     },
-    "extra":{
+    "extra": {
         "installer-paths": {
             "public/mu-plugins/{$name}": ["type:wordpress-muplugin"],
             "public/plugins/{$name}": ["type:wordpress-plugin"],
