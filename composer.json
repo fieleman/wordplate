@@ -6,12 +6,17 @@
     "require": {
         "php": "^5.5.9 || ^7.0",
         "wordplate/framework": "^4.0",
-        "roots/soil": "^3.0"
+        "roots/soil": "^3.0",
+        "koodimonni-language/nl_nl": "^4.4"
     },
     "repositories": [
         {
             "type": "composer",
             "url": "https://wpackagist.org"
+        },
+        {
+            "type": "composer",
+            "url": "http://languages.koodimonni.fi"
         }
     ],
     "scripts": {
@@ -24,6 +29,11 @@
             "public/mu-plugins/{$name}": ["type:wordpress-muplugin"],
             "public/plugins/{$name}": ["type:wordpress-plugin"],
             "public/themes/{$name}": ["type:wordpress-theme"]
+        },
+        "dropin-paths": {
+            "public/languages/": ["vendor:koodimonni-language"],
+            "public/languages/plugins/": ["vendor:koodimonni-plugin-language"],
+            "public/languages/themes/": ["vendor:koodimonni-theme-language"]
         },
         "wordpress-install-dir": "public/wordpress"
     },

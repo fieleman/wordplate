@@ -1,0 +1,22 @@
+{
+  "name": "Wordpress Theme",
+  "description": "Wordplate is a modern WordPress stack. Don't repeat yourself.",
+  "main": "",
+  "authors": [
+    "Thomas Filius <thomas.filius@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/fieleman/wordplate",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "bootstrap-sass-official#^3.3.6"
+  }
+}

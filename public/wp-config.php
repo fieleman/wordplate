@@ -40,6 +40,9 @@ define('EMPTY_TRASH_DAYS', env('EMPTY_TRASH_DAYS', 7));
 /* Set the default WordPress theme. */
 define('WP_DEFAULT_THEME', env('WP_THEME', 'wordplate'));
 
+/* Set default language */
+define('WPLANG', env('WP_LANG', ''));
+
 /* Specify the Number of Post Revisions. */
 define('WP_POST_REVISIONS', env('WP_POST_REVISIONS', 2));
 

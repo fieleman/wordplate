@@ -1,0 +1,12 @@
+@import "colors";
+@import "variables";
+
+@import "vendor/bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+body {
+  // Add margin to make room for nav bar
+  & > .wrap { margin-top: 50px; }
+
+  // Extra room when admin-bar is visible
+  .admin-bar .navbar-fixed-top { top: 32px; }
+}

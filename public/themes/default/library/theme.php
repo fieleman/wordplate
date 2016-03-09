@@ -8,7 +8,7 @@ add_action('after_setup_theme', function () {
     add_theme_support('post-thumbnails');
 
     // Show the admin bar.
-    show_admin_bar(false);
+    //show_admin_bar(false);
 
     // Add support for post formats.
     //add_theme_support('post-formats', ['aside', 'audio', 'gallery', 'image', 'link', 'quote', 'video']);
